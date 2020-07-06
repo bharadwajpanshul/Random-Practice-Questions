@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+//no. of ways to make ur array sum even by removing only one element//
+int findnoofways(int arr[],int m)
+{
+int count_even=0;
+int count_odd=0;
+for (int i = 0; i < m; i++) { 
+        if (arr[i] % 2) {
+            count_odd++; 
+        } 
+else
+{
+	count_even++; }
+}
+ if (count_odd % 2) { 
+        return count_odd; 
+    } 
+    else { 
+        return count_even; }
+}
+int main()
+{
+	int m;
+cin>>m;	
+int arr[m];
+for(int i=0;i<m;i++)
+{
+	cin>> arr[i];
+}
+cout<< findnoofways(arr,m);
+return 0;
+}
